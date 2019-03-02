@@ -1,9 +1,9 @@
 #!/bin/bash
 if [ -z "$CERT" ]
 then
-  echo $ANYCONNECT_PASSWORD|openconnect $ANYCONNECT_SERVER --user=$ANYCONNECT_USER -b --csd-wrapper csd-wrapper.sh
+  echo $ANYCONNECT_PASSWORD|openconnect $ANYCONNECT_SERVER --user=$ANYCONNECT_USER -b --csd-wrapper=csd-wrapper.sh
 else
-  echo $ANYCONNECT_PASSWORD|openconnect $ANYCONNECT_SERVER --user=$ANYCONNECT_USER --servercert=$CERT -b --csd-wrapper csd-wrapper.sh
+  echo $ANYCONNECT_PASSWORD|openconnect $ANYCONNECT_SERVER --user=$ANYCONNECT_USER --servercert=$CERT -b --csd-wrapper=csd-wrapper.sh
 fi
 
 sleep 5
